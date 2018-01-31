@@ -1,0 +1,17 @@
+.caja {background-color:transparent; width:600px; height:200px; }
+	
+body {background-image: url("https://www.mactualidad.com/wp-content/uploads/2013/06/fondo-pantalla-mac-25.jpg"); width:100%; height:100%;}
+
+h4 {color:white;}
+
+legend {color:white;}
+
+h2 {color:white;}
+
+b {color:purple;}
+
+table {border:solid purple; border-collapse:collapse;}
+
+a:hover {color:white;} <!-- El hover es para cuando pasas el ratón por encima. -->
+
+
