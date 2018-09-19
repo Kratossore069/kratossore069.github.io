@@ -1,6 +1,6 @@
 .caja {background-color:transparent; width:600px; height:200px; }
 	
-body {background-image: url("http://static.asiawebdirect.com/m/phuket/portals/kosamui-com/homepage/beaches/pagePropertiesImage/samui-beaches.jpg.jpg"); width:100%; height:100%;}
+body {background-image: url("http://static.asiawebdirect.com/m/phuket/portals/kosamui-com/homepage/beaches/pagePropertiesImage/samui-beaches.jpg.jpg"); repeat:no-repeat; width:100%; height:100%;}
 
 h4 {color:black;}
 
@@ -8,7 +8,7 @@ legend {color:white;}
 
 h2 {color:black;}
 
-b {color:red;}
+b {color:blue;}
 
 table {border:solid purple; border-collapse:collapse;}
 
