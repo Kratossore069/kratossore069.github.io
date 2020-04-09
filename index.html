@@ -10,12 +10,22 @@
 <h2 id="eleccion" align="center"></h2>
 <h1 align="center">Y se encuentra en..</h1>
 <h2 align="center" id="lugar"></h2>
+<div align="center" id="imagen"></div> <!-- Donde colocar la imagen -->
 <h1 align="center" style="color:white">¡Decide de manera aleatoria dónde comer hoy!</h1>
+<form align="center"> <!-- La forma de ponerlo al centro -->
+<input type="button" value="Actualizar sitio de comida" onclick="location.reload()"></input>
+</form>
 
 <script>
 
+	//Imágenes UN INTENTO
+	var albaroteImagen = new Image();
+	albaroteImagen.src = './albarote.jpg';
+	
+
 	//Primero declaro los sitios a los que ir.
-	var sitios = ["El Albarote", "El Fonil", "Casa Tomás Costillas", "La Charca", "Casa Fernando"];
+	var sitios = ["El Albarote", "El Fonil", "Casa Tomás Costillas", "La Charca", "Casa Fernando", "La Casona", 
+	"La huerta de Ana y Eva", "Guachinche La Granja"];
 	
 	//Después hago un número aleatorio.
 	var aleatorio = (Math.floor(Math.random()*(sitios.length))+0);
@@ -29,11 +39,15 @@
 	var tomas='<iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d224507.40479918825!2d-16.552249317058724!3d28.45158071718775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d28.4098328!2d-16.4995004!4m5!1s0xc41cdbeca801ddb%3A0x3fdb6cd77a760b0b!2scasa%20tom%C3%A1s%20tenerife!3m2!1d28.493080499999998!2d-16.355052!5e0!3m2!1ses!2ses!4v1578917563245!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>';
 	var charca = '<iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d224506.98259454305!2d-16.51375821703928!3d28.451779566863237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d28.4098328!2d-16.4995004!4m5!1s0xc41cbc20f64ef91%3A0xa71af41d6b2518a1!2sla%20charca%20tenerife!3m2!1d28.5095347!2d-16.229512!5e0!3m2!1ses!2ses!4v1578917618949!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>';
 	var fernan='<iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d14035.803389029632!2d-16.504530418089022!3d28.420739970027476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d28.4098328!2d-16.4995004!4m5!1s0xc41d4e2fc74367d%3A0xb9c87fd663b12a28!2scasa%20fernando%20tenerife!3m2!1d28.431949999999997!2d-16.485117!5e0!3m2!1ses!2ses!4v1578917677828!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>';
+	var casona='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112306.13220953358!2d-16.550073552486875!3d28.402154492215654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc402ab0a0da1bf3%3A0x6718e59c88e35633!2sGuachinche%20La%20Casona!5e0!3m2!1ses!2ses!4v1586471944833!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>';
+	var anaeva='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.854827166853!2d-16.451629084952774!3d28.453792298899028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc41d47c583995bb%3A0xee53dde47226c5fe!2sGuachinche%20La%20Huerta%20de%20Ana%20y%20Eva!5e0!3m2!1ses!2ses!4v1586472108865!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>';
+	var granja='<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28056.723099257302!2d-16.315099613882026!3d28.47682445201974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc41cd7903e09755%3A0xd217a1a5e3c9ec97!2sGuachinche%20La%20Granja!5e0!3m2!1ses!2ses!4v1586472254022!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>';
 	
 	//De manera aleatoria, se despliega ese sitio.
 	switch(aleatorio){
 		case 0:
 			document.getElementById("lugar").innerHTML=albarote;
+			document.getElementById('imagen').iframe=albaroteImagen; //Intenté poner imágenes
 			break;
 		case 1:
 			document.getElementById("lugar").innerHTML=fonil;
@@ -46,6 +60,15 @@
 			break;
 		case 4:
 			document.getElementById("lugar").innerHTML=fernan;
+			break;
+		case 5:
+			document.getElementById('lugar').innerHTML=casona;
+			break;
+		case 6:
+			document.getElementById('lugar').innerHTML=anaeva;
+			break;
+		case 7:
+			document.getElementById('lugar').innerHTML=granja;
 			break;
 	}
 </script>
